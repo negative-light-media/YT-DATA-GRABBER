@@ -15,6 +15,7 @@ class Channel:
         self.subscribers = int(channel_data['statistics']['subscriberCount'])
         self.hiddenSubscribers = channel_data['statistics']['hiddenSubscriberCount']
         self.videoCount = int(channel_data['statistics']['videoCount'])
+        self.uploadPlaylist = channel_data['contentDetails']['relatedPlaylists']['uploads']
 
     def __str__(self):
         return f'Channel: {self.name}\nCountry: {self.country}\nViews: {self.viewCount}\nSubcribers: {self.subscribers}\nVideoes: {self.videoCount}'
